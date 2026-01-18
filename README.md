@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TaskFlow - Real-time Task Manager
+
+A modern task management application built with **Next.js**, **Firebase**, and **React**. Users can sign up, log in, and manage their tasks with real-time synchronization.
+
+## Features
+
+- 🔐 **User Authentication** - Email/Password signup and login with Firebase
+- 📝 **Task Management** - Create, view, and delete tasks in real-time
+- ⚡ **Real-time Updates** - Instant task synchronization using Firestore
+- 🌙 **Dark Mode** - Toggle between light and dark themes on landing page
+- 👤 **User-specific Tasks** - Each user sees only their own tasks (isolated by email)
+- 💬 **Testimonials** - Social proof section with user reviews
+- 📱 **Responsive Design** - Works seamlessly on all devices
+
+## Tech Stack
+
+- **Frontend:** Next.js 14, React, TypeScript/JavaScript
+- **Backend:** Firebase (Firestore Database, Authentication)
+- **Styling:** CSS-in-JS with inline styles
+- **Package Manager:** npm
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 16 or higher
+- npm or yarn
+- Firebase account
+
+### Installation
 
 ```bash
+# Navigate to project directory
+cd next-basics
+
+# Install dependencies
+npm install
+
+# Configure Firebase
+# Update  with your Firebase credentials:
+# - apiKey
+# - authDomain
+# - projectId
+# - storageBucket
+# - messagingSenderId
+# - appId
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
