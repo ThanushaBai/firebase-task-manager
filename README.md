@@ -44,9 +44,8 @@ npm install
 # - messagingSenderId
 # - appId
 
-<<<<<<< HEAD
+
 # Run development server
 =======
 # Run development server
 npm run dev
->>>>>>> d30ffacde1983c5e8b787ef18d3b5b8105a0cdb7
