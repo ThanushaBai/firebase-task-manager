@@ -14,7 +14,7 @@ A modern task management application built with **Next.js**, **Firebase**, and *
 
 ## Tech Stack
 
-- **Frontend:** Next.js 14, React, TypeScript/JavaScript
+- **Frontend:** Next.js 14, React, JavaScript
 - **Backend:** Firebase (Firestore Database, Authentication)
 - **Styling:** CSS-in-JS with inline styles
 - **Package Manager:** npm
