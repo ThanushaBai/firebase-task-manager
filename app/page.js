@@ -50,19 +50,19 @@ export default function LandingPage() {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "virat",
       role: "Project Manager",
       text: "TaskFlow has completely transformed how I manage my team's daily tasks. The real-time updates are game-changing!",
       rating: 5,
     },
     {
-      name: "Mike Chen",
+      name: "saniya",
       role: "Developer",
       text: "As a developer, I appreciate how clean and efficient TaskFlow is. Firebase integration is seamless.",
       rating: 5,
     },
     {
-      name: "Emma Rodriguez",
+      name: "elena",
       role: "Entrepreneur",
       text: "Simple, elegant, and powerful. TaskFlow is exactly what I needed to stay organized.",
       rating: 4,
@@ -77,7 +77,7 @@ export default function LandingPage() {
       } else {
         await signInWithEmailAndPassword(auth, email, password);
       }
-      // Store email in localStorage and navigate
+      
       localStorage.setItem("userEmail", email);
       router.push("/tasks");
     } catch (err) {
@@ -94,22 +94,29 @@ export default function LandingPage() {
           justifyContent: "space-between",
           alignItems: "center",
           padding: "20px",
+          borderBottom: "1px solid #cbd5f5",
         }}
       >
         <h2>TaskFlow</h2>
-        <button
-          style={styles.button}
-          onClick={() => setDarkMode(!darkMode)}
-        >
-          {darkMode ? "☀ Light Mode" : "🌙 Dark Mode"}
-        </button>
+        <div style={{ display: "flex", gap: "30px", alignItems: "center" }}>
+          <a href="#home" style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}>Home</a>
+          <a href="#features" style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}>Features</a>
+          <a href="#testimonials" style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}>Testimonials</a>
+          <a href="#contact" style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}>Contact Us</a>
+          <button
+            style={styles.button}
+            onClick={() => setDarkMode(!darkMode)}
+          >
+            {darkMode ? "☀ Light Mode" : "🌙 Dark Mode"}
+          </button>
+        </div>
       </nav>
 
       {/* Hero Section */}
       <section
         style={{
           textAlign: "center",
-          padding: "80px 20px",
+          padding: "120px 20px",
         }}
       >
         <h1 style={{ fontSize: "36px", marginBottom: "16px" }}>
@@ -136,7 +143,7 @@ export default function LandingPage() {
           justifyContent: "center",
           gap: "30px",
           flexWrap: "wrap",
-          paddingBottom: "60px",
+          padding: "100px 20px",
         }}
       >
         <div style={styles.card}>
@@ -155,7 +162,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section style={{ marginTop: "80px", textAlign: "center" }}>
+      <section style={{ marginTop: "100px", padding: "100px 20px", textAlign: "center" }}>
         <h2>Why TaskFlow?</h2>
 
         <p style={{ maxWidth: "600px", margin: "20px auto", color: "#555" }}>
@@ -172,7 +179,7 @@ export default function LandingPage() {
       </section>
 
       {/* Testimonials Section */}
-      <section style={{ marginTop: "80px", paddingBottom: "60px" }}>
+      <section style={{ marginTop: "120px", padding: "100px 20px" }}>
         <h2 style={{ textAlign: "center", marginBottom: "50px" }}>What Our Users Say</h2>
         <div
           style={{
@@ -188,7 +195,7 @@ export default function LandingPage() {
                 {"⭐".repeat(testimonial.rating)}
               </div>
               <p style={{ fontStyle: "italic", marginBottom: "15px", fontSize: "14px" }}>
-                "{testimonial.text}"
+                &quot;{testimonial.text}&quot;
               </p>
               <p style={{ fontWeight: "bold", marginBottom: "5px" }}>
                 {testimonial.name}
@@ -204,12 +211,57 @@ export default function LandingPage() {
       {/* Footer */}
       <footer
         style={{
-          textAlign: "center",
-          padding: "20px",
+          backgroundColor: darkMode ? "#1e293b" : "#f1f5f9",
+          padding: "60px 20px 20px",
           borderTop: "1px solid #cbd5f5",
+          marginTop: "80px",
         }}
       >
-        Built with Next.js & Firebase
+        <div style={{ maxWidth: "1200px", margin: "0 auto" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "40px", marginBottom: "40px" }}>
+            {/* Company Info */}
+            <div>
+              <h3 style={{ marginBottom: "15px" }}>TaskFlow</h3>
+              <p style={{ maxWidth: "250px", fontSize: "14px", color: "#666" }}>
+                Your ultimate task management solution with real-time updates powered by Firebase.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 style={{ marginBottom: "15px" }}>Quick Links</h4>
+              <ul style={{ listStyle: "none", padding: 0 }}>
+                <li style={{ marginBottom: "8px" }}><a href="#home" style={{ textDecoration: "none", color: "inherit" }}>Home</a></li>
+                <li style={{ marginBottom: "8px" }}><a href="#features" style={{ textDecoration: "none", color: "inherit" }}>Features</a></li>
+                <li style={{ marginBottom: "8px" }}><a href="#testimonials" style={{ textDecoration: "none", color: "inherit" }}>Testimonials</a></li>
+                <li><a href="#contact" style={{ textDecoration: "none", color: "inherit" }}>Contact Us</a></li>
+              </ul>
+            </div>
+
+            {/* Contact Information */}
+            <div id="contact">
+              <h4 style={{ marginBottom: "15px" }}>Contact Us</h4>
+              <p style={{ marginBottom: "10px", fontSize: "14px" }}>
+                📧 Email: <a href="mailto:info@taskflow.com" style={{ textDecoration: "none", color: "#38bdf8" }}>info@taskflow.com</a>
+              </p>
+              <p style={{ marginBottom: "10px", fontSize: "14px" }}>
+                📱 Phone: <a href="tel:+1234567890" style={{ textDecoration: "none", color: "#38bdf8" }}>+1 (234) 567-890</a>
+              </p>
+              <p style={{ marginBottom: "10px", fontSize: "14px" }}>
+                📍 Address: 123 Tech Street, Tech City, TC 12345
+              </p>
+              <div style={{ marginTop: "15px", display: "flex", gap: "10px" }}>
+                <a href="#" style={{ textDecoration: "none", color: "#38bdf8", fontSize: "14px" }}>Twitter</a>
+                <a href="#" style={{ textDecoration: "none", color: "#38bdf8", fontSize: "14px" }}>LinkedIn</a>
+                <a href="#" style={{ textDecoration: "none", color: "#38bdf8", fontSize: "14px" }}>Facebook</a>
+              </div>
+            </div>
+          </div>
+
+          <div style={{ borderTop: "1px solid #cbd5f5", paddingTop: "20px", textAlign: "center", fontSize: "14px", color: "#666" }}>
+            <p>© 2026 TaskFlow. All rights reserved. Built with Next.js & Firebase</p>
+          </div>
+        </div>
       </footer>
 
       {showLogin && (
